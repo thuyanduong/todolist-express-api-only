@@ -1,0 +1,17 @@
+<%- include('./partials/header.ejs') %>
+<body>
+  <%- include('./partials/navbar.ejs') %>
+  <div class="ui segment container">
+    <h1>All Users</h1>
+    <div class="ui link cards">
+      <% for(const user of users){ %>
+        <div class="card">
+          <a href="/users/<%= user.id %>">
+            <p class="center aligned header"><%= user.name %></p>
+          </a>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

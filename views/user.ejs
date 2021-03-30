@@ -1,0 +1,16 @@
+<%- include('./partials/header.ejs') %>
+<body>
+  <%- include('./partials/navbar.ejs') %>
+  <div class="ui segment container">
+    <h1><%= title %></h1>
+    <form action="/users/<%= user.id %>/tasks/new" method="GET">
+      <input type="submit" value="Add Task">
+    </form>
+    <ul>
+      <% for(const task of user.tasks){ %>
+        <li><a href="/tasks/<%= task.id %>"> <%= task.title %> </a> <%= task.completed ? "(Done)" : "(Not Done)" %> </li>
+      <% } %>
+    </ul>
+  </div>
+</body>
+</html>
