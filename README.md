@@ -4,7 +4,7 @@
 
 ### Intructions for local run
 * Clone this repo and in the directory, run `npm install` to load depencies.
-* Assuming you have Postgres isntalled, create a database and execute the SQL script in `db/init.sql`.
+* Assuming you have Postgres installed, create a new, empty database and execute the SQL script in `db/init.sql`.
 * Update the `.env` file with your local variables.
 * Run `npm start` and navigate to `http://localhost:3001/`
 
